@@ -7,7 +7,7 @@ import store from "./store";
 import "./assets/scss/_app.scss";
 
 Vue.config.productionTip = false;
-
+store.dispatch("dietList");
 new Vue({
   router,
   store,
