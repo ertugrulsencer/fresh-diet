@@ -1,23 +1,21 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <div v-for="(plan, i) in diet_list" :key="i">
-      {{ plan.title }}
-    </div>
-    <router-view />
+  <div class="wrapper">
+    <AppHeader />
+    <transition mode="out-in">
+      <RouterView />
+    </transition>
+    <AppFooter />
   </div>
 </template>
 
 <script>
+import Header from "./components/shared/Header";
+import Footer from "./components/shared/Footer";
 export default {
   name: "App",
-  computed: {
-    diet_list() {
-      return this.$store.getters.diet_list;
-    },
+  components: {
+    AppHeader: Header,
+    AppFooter: Footer,
   },
 };
 </script>
