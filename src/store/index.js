@@ -9,6 +9,7 @@ export default new Vuex.Store({
   state: {
     diet_list: false,
     diet_item: false,
+    about: null,
   },
   getters: {
     diet_list(state) {
@@ -17,6 +18,9 @@ export default new Vuex.Store({
     diet_item(state) {
       return state.diet_item;
     },
+    about(state) {
+      return state.about;
+    },
   },
   mutations: {
     dietList(state, list) {
@@ -24,6 +28,9 @@ export default new Vuex.Store({
     },
     dietItem(state, item) {
       state.diet_item = item;
+    },
+    about(state, data) {
+      state.about = data;
     },
   },
   actions: {
@@ -63,6 +70,19 @@ export default new Vuex.Store({
           })
           .finally(() => {
             payload.callback ? payload.callback() : false;
+          });
+      }, 1000);
+    },
+    about(context) {
+      setTimeout(() => {
+        axios
+          .get("https://fresh-diet-default-rtdb.firebaseio.com/about.json")
+          .then((res) => {
+            context.commit("about", res.data);
+          })
+          .catch((err) => {
+            context.commit("about", [err]);
+            console.log(err);
           });
       }, 1000);
     },

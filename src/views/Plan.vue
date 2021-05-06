@@ -1,67 +1,15 @@
 <template>
-  <main>
+  <main class="plan">
     <transition mode="out-in">
       <div class="diet-detail" key="diet" v-if="!loading">
         <div class="container">
           <h1 class="header">
             {{ diet_item.title }}
           </h1>
-          <section v-if="diet_item.detail.breakfast" class="breakfast">
-            <header class="list-header">
-              <strong>Kahvaltı</strong>
-            </header>
-            <ul class="list-breakfast">
-              <li
-                v-for="(breakfast, index) in diet_item.detail.breakfast"
-                :key="index"
-                class="list-item"
-              >
-                {{ breakfast }}
-              </li>
-            </ul>
-          </section>
-          <section v-if="diet_item.detail.dinner" class="dinner">
-            <header class="list-header">
-              <strong>Atıştırmalık</strong>
-            </header>
-            <ul class="list-dinner">
-              <li
-                v-for="(dinner, index) in diet_item.detail.dinner"
-                :key="index"
-                class="list-item"
-              >
-                {{ dinner }}
-              </li>
-            </ul>
-          </section>
-          <section v-if="diet_item.detail.lunch" class="lunch">
-            <header class="list-header">
-              <strong>Öğle Yemeği</strong>
-            </header>
-            <ul class="list-lunch">
-              <li
-                v-for="(lunch, index) in diet_item.detail.lunch"
-                :key="index"
-                class="list-item"
-              >
-                {{ lunch }}
-              </li>
-            </ul>
-          </section>
-          <section v-if="diet_item.detail.snack" class="snack">
-            <header class="list-header">
-              <strong>Akşam Yemeği</strong>
-            </header>
-            <ul class="list-snack">
-              <li
-                v-for="(snack, index) in diet_item.detail.snack"
-                :key="index"
-                class="list-item"
-              >
-                {{ snack }}
-              </li>
-            </ul>
-          </section>
+          <BreakfastList :list="diet_item.detail.breakfast" />
+          <DinnerList :list="diet_item.detail.dinner" />
+          <LunchList :list="diet_item.detail.lunch" />
+          <SnackList :list="diet_item.detail.snack" />
         </div>
       </div>
       <Loader key="loader" v-else :loading="loading" />
@@ -71,10 +19,18 @@
 
 <script>
 import Loader from "@/components/Loader";
+import BreakfastList from "@/components/lists/Breakfast";
+import DinnerList from "@/components/lists/Dinner";
+import LunchList from "@/components/lists/Lunch";
+import SnackList from "@/components/lists/Snack";
 export default {
   name: "Plan",
   components: {
     Loader,
+    BreakfastList,
+    DinnerList,
+    LunchList,
+    SnackList,
   },
   data() {
     return {
@@ -97,14 +53,14 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.header {
+<style lang="scss">
+.plan .header {
   color: var(--primary);
   margin: 24px 0;
   font-size: 1.75rem;
   font-weight: 800;
 }
-section {
+.plan .diet-detail section {
   border: 2px solid var(--primary);
   border-radius: 4px;
   padding: 14px 18px;
@@ -120,6 +76,7 @@ section {
     li {
       color: var(--dark);
       line-height: 150%;
+      font-weight: 600;
     }
   }
 }
