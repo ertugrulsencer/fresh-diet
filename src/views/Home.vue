@@ -79,4 +79,9 @@ main {
     }
   }
 }
+@media screen and (max-width: 720px) {
+  .img {
+    display: none !important;
+  }
+}
 </style>

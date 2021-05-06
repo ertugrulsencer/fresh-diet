@@ -21,6 +21,11 @@ hr {
     font-size: 14px;
   }
   .wrapper {
+    height: calc(100% - (74px + 56px));
+  }
+}
+@media screen and (max-width: 380px) {
+  .wrapper {
     height: calc(100% - (74px + 84px));
   }
 }

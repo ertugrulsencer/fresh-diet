@@ -53,4 +53,9 @@ p {
   text-indent: 14px;
   margin-bottom: 14px;
 }
+@media screen and (max-width: 720px) {
+  h1 {
+    font-size: 1.35rem;
+  }
+}
 </style>
