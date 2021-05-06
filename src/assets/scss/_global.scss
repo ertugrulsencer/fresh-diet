@@ -16,3 +16,11 @@ hr {
   background: linear-gradient(to right, var(--primary), var(--light));
   border-radius: 6px;
 }
+@media screen and (max-width: 490px) {
+  html {
+    font-size: 14px;
+  }
+  .wrapper {
+    height: calc(100% - (74px + 84px));
+  }
+}

@@ -12,7 +12,9 @@
           >
         </li>
         <li>
-          <router-link :to="{name: 'Plans'}" class="link">Diyet Planı</router-link>
+          <router-link :to="{ name: 'Plans' }" class="link"
+            >Diyet Planı</router-link
+          >
         </li>
         <li>
           <router-link :to="{ name: 'About' }" class="link"
@@ -68,6 +70,16 @@ header.header {
           }
         }
       }
+    }
+  }
+}
+@media screen and (max-width: 490px) {
+  header.header {
+    height: 74px !important;
+    .container {
+      padding: 14px;
+      height: 100%;
+      flex-direction: column;
     }
   }
 }

@@ -56,4 +56,18 @@ footer.footer {
     }
   }
 }
+@media screen and (max-width: 380px) {
+  footer.footer {
+    height: 84px;
+    .container {
+      padding: 14px 0;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+    }
+    p {
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+  }
+}
 </style>
