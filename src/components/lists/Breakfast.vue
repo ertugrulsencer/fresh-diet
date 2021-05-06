@@ -16,8 +16,7 @@ export default {
   name: "BreakfastList",
   props: {
     list: {
-      type: Object,
-      require: true,
+      type: Array,
     },
   },
 };

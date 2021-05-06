@@ -6,10 +6,10 @@
           <h1 class="header">
             {{ diet_item.title }}
           </h1>
-          <BreakfastList :list="diet_item.detail.breakfast" />
-          <DinnerList :list="diet_item.detail.dinner" />
-          <LunchList :list="diet_item.detail.lunch" />
-          <SnackList :list="diet_item.detail.snack" />
+          <BreakfastList :list="diet_item.detail.breakfast || []" />
+          <DinnerList :list="diet_item.detail.dinner || []" />
+          <LunchList :list="diet_item.detail.lunch || []" />
+          <SnackList :list="diet_item.detail.snack || []" />
         </div>
       </div>
       <Loader key="loader" v-else :loading="loading" />
