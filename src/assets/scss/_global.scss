@@ -3,3 +3,16 @@
   width: 90%;
   max-width: 1024px;
 }
+.wrapper {
+  height: calc(100% - (56px + 54px));
+  main {
+    overflow-y: auto;
+    height: 100%;
+  }
+}
+hr {
+  height: 3px;
+  border: 0;
+  background: linear-gradient(to right, var(--primary), var(--light));
+  border-radius: 6px;
+}

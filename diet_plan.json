@@ -1,0 +1,65 @@
+[
+  {
+    "detail": {
+      "breakfast": [
+        "Yulaf ezmesi lapası",
+        "Sütsüz ve şekersiz 1 bardak çay veya kahve"
+      ],
+      "dinner": [
+        "Herhangi bir tuzsuz kuruyemiş",
+        "Bir parça peynir (tuzlu veya az yağlı daha iyi)"
+      ],
+      "lunch": [
+        "2 parça tam tahıllı kızarmış ekmek ve sebzeler (soğan, domates, merul vs.)",
+        "Herhangi bir ızgara veya haşlama yağsız et (dana, tavuk göğsü, kuzu, pançeta vs.)"
+      ],
+      "snack": [
+        "Tavuk Salatası (tavuk göğsü, ızgara veya haşlanmış, biraz meyve veya sebze ile)"
+      ]
+    },
+    "title": "Gün 1",
+    "url": "gun-1"
+  },
+  {
+    "detail": {
+      "breakfast": [
+        "Sütsüz ve şekersiz 1 bardak çay veya kahve",
+        "Yağsız süt ile yulaf (yulaf ezmesi, yarma, arpa veya mısır irmiği)"
+      ],
+      "dinner": ["1 kurabiye (az şekerli veya şekersiz daha iyi)"],
+      "lunch": [
+        "Sebze salatası (havuç, domates, tatlı biber, salatalık vs.)",
+        "Yoğurt (az yağlı veya az şekerli daha iyi)"
+      ],
+      "snack": [
+        "Hiç tuz eklenmemiş herhangi bir sebze çorbası",
+        "Herhangi bir ızgara veya haşlama balık veya deniz ürünü (kalamar, yengeç, karides)"
+      ]
+    },
+    "title": "Gün 2",
+    "url": "gun-2"
+  },
+  {
+    "detail": {
+      "breakfast": [
+        "Sütsüz ve şekersiz 1 bardak çay veya kahve",
+        "2 çırpılmış yumurta (tereyağı vuya sıvıyağ yok)",
+        "Yulaf ezmesi lapası"
+      ],
+      "dinner": [
+        "Yoğurt (az yağlı veya az şekerli daha iyi)",
+        "Biraz humus veya patates püresi"
+      ],
+      "lunch": [
+        "Buharda pişirilmiş esmer pirinç veya haşlanmış erişte",
+        "Pişmiş veya haşlanmış sebzeler (kuşkonmaz, brokoli, karnabahar, ıspanak, veya bezelye)"
+      ],
+      "snack": [
+        "Fırında pişirilmiş veya haşlanmış 3 patates",
+        "Herhangi bir ızgara veya haşlama yağsız et (dana, tavuk göğsü, kuzu, pançeta vs.)"
+      ]
+    },
+    "title": "Gün 3",
+    "url": "gun-3"
+  }
+]

@@ -12,7 +12,7 @@
           >
         </li>
         <li>
-          <router-link to="/plans" class="link">Diyet Planı</router-link>
+          <router-link :to="{name: 'Plans'}" class="link">Diyet Planı</router-link>
         </li>
         <li>
           <router-link :to="{ name: 'About' }" class="link"

@@ -8,7 +8,9 @@
   box-sizing: border-box;
   text-decoration: none;
   line-height: 100%;
-  font-family: "Mulish", sans-serif;
+  &:not(i) {
+    font-family: "Mulish", sans-serif;
+  }
 }
 html,
 body {
